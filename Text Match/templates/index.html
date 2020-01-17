@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+	
+	.column {
+	  float: left;
+	  width: 50%;
+	}	
+	</style>
+</head>
+
+<body>
+    <form action="/match_text" method="post">
+        <h1>Text Matching App</h1>
+        <h3>Input text in the fields below and click Submit to test similarity between the two texts</h3><br>
+		
+<!-- Create 2 text boxes for inputting text -->
+        <div>
+            <div class="column" >
+                <textarea rows="10" cols="100" name="input_text1" placeholder="Copy and paste your text here......"></textarea><br><br>
+                <textarea rows="10" cols="100" name="input_text2" placeholder="Copy and paste your text here......"></textarea><br><br>
+                <input type="submit" name="submit">
+                <input type="reset" value="Reset"><br><br>
+                <label>Match Score</label>
+                <input type="text" name="match_score" value="{{ match_score }}" readonly><br>
+
+            </div>
+
+<!-- Create 3 options for matching text blobs -->
+            <div class="column" >
+                <p><h3>Select match type:</h3></p>
+                <input type="radio" id="exact_match" name="match_type" value="exact_match" checked>Exact Match (case-sensitive)<br>
+                <input type="radio" id="exact_match_no_case" name="match_type" value="exact_match_no_case">Exact Match (ignore case)<br>
+                <input type="radio" id="match_words_only" name="match_type" value="match_words_only">Match Words Only (ignore case and punctuation)
+            </div>
+        </div>
+    </form>
+</body>
+</html>
