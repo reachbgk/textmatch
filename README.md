@@ -19,7 +19,7 @@ A success / failure code is shown based on the test results
   * Run "python app.py". This will start the local web service and return an IP address
   * Open the IP address in your browser
   
-# The application
+# The Application
 * Enter two blobs of text in the two text boxes
 * Select how you want to match
   * Case sensitive exact match
